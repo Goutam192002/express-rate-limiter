@@ -2,7 +2,7 @@ const redis = require('../lib/redis').getClient();
 
 
 
-module.exports = (limit, expiry) => {
+module.exports = ({limit, expiry}) => {
     // Defaults: Max 60 requests/minute
     limit = limit || 60;
     expiry = expiry || 60;
